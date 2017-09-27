@@ -1,0 +1,110 @@
+{
+    "Comprobante": {
+        "Emisor": {
+            "DomicilioFiscal": {
+                "_calle": "Lago Rodolfo", "_noExterior": "29", "_colonia": "Granada", "_municipio": "Miguel Hidalgo", "_estado": "Ciudad de México", "_pais": "MEXICO", "_codigoPostal": "11520", "__prefix": "cfdi"
+            }
+            ,
+            "ExpedidoEn": {
+                "_calle": "LAGO RODOLFO", "_noExterior": "29", "_colonia": "GRANADA.", "_localidad": "MIGUEL HIDALGO", "_estado": "CIUDAD DE MEXICO", "_pais": "MEXICO", "_codigoPostal": "11520", "__prefix": "cfdi"
+            }
+            ,
+            "RegimenFiscal": {
+                "_Regimen": "Regimen General de Ley Personas Morales", "__prefix": "cfdi"
+            }
+            ,
+            "_rfc":"ASE930924SS7",
+            "_nombre":"EDENRED MEXICO, S.A. DE C.V.",
+            "__prefix":"cfdi"
+        }
+        ,
+        "Receptor": {
+            "Domicilio": {
+                "_calle": "CAMPOS ELISEOS", "_noExterior": "400", "_noInterior": "OFICINA 1102", "_colonia": "LOMAS DE CHAPULTEPEC 1 SECCION", "_localidad": "MIGUEL HIDALGO", "_estado": "CIUDAD DE MEXICO", "_pais": "MEXICO", "_codigoPostal": "11000", "__prefix": "cfdi"
+            }
+            ,
+            "_rfc":"OMN140523KH1",
+            "_nombre":"OPERADORA DE MINAS DE NACOZARI, S.A. DE C.V.",
+            "__prefix":"cfdi"
+        }
+        ,
+        "Conceptos": {
+            "Concepto": {
+                "_cantidad": "1", "_unidad": "SERVICIO", "_noIdentificacion": "CL000003911631", "_descripcion": "CONTRAPRESTACION", "_valorUnitario": "336.47", "_importe": "336.47", "__prefix": "cfdi"
+            }
+            ,
+            "__prefix":"cfdi"
+        }
+        ,
+        "Impuestos": {
+            "Traslados": {
+                "Traslado": {
+                    "_impuesto": "IVA", "_tasa": "16.00", "_importe": "53.84", "__prefix": "cfdi"
+                }
+                ,
+                "__prefix":"cfdi"
+            }
+            ,
+            "_totalImpuestosTrasladados":"53.84",
+            "__prefix":"cfdi"
+        }
+        ,
+        "Complemento": {
+            "TimbreFiscalDigital": {
+                "_xmlns:tfd": "http://www.sat.gob.mx/TimbreFiscalDigital", "_xsi:schemaLocation": "http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/sitio_internet/cfd/TimbreFiscalDigital/TimbreFiscalDigital.xsd", "_version": "1.0", "_UUID": "21A353A4-E6EC-024B-97A4-C38694EE8305", "_FechaTimbrado": "2017-08-15T16:04:45", "_selloCFD": "M9s7ijQBmIe8O38NNFPuFpLw3fyJEnVEC8FZWxu/hPUgiGPt+1U9is3Xkfqz2p7cbD7BgNmdeFp2AxCZ1ZYKNZdmMhtUK7fO/Q2d7Qk1O3WEeNNuLPKC4EXnFxjPJjH8tV/ZDPfY5Ny9ZCo4zAI4M+BCoTXUJEnoC+s0GVzflI9MpauBWgkyEFuF6N/56iH5JjF+abxKh3OD7uSARICzRGmrJwvb8ozwSldYs/Wslf5s6jq3KSqL3+bWhiWzbOLXtYTVzH87Q69zcjsKdkJQNlpmgEODo9M5B0fLCUNO2TeGmzSeBXUFITfRkZ/LvDsTa72pWFQk21/1YZ8WenuXPA==", "_noCertificadoSAT": "00001000000401041203", "_selloSAT": "Eu/DZNQn4ILPyF2J9n+N41tUltY48N94/4aTufmdrRhhdkyZjUWDpBG8Gm5TZ2FP1gjZnO9mb1q8UmCH2GKCv1oZEAtO61kdkQmPhHL8l/G3PMIn1n8QNqzvMF5nxkmOnoncrsQWvz8yMmC3/VCKfu9uO3I5xm+yyAPzYRfvtl8b1870SAu72uaXzbJW1/Vich+9XM9K49GbZfUDo7DfZb5/khu1fPo7dZGYjxNmuKGN1vHR+2X9zMS6p+L1JDuw4VG3tvJT4FGbEdhgQiSfAJyWKjSv9krqXnjB1BBR2ufly3d/MXZPwt1vI7yboLV84VtLmmnLEH8L2ENPw8S8lQ==", "__prefix": "tfd"
+            }
+            ,
+            "__prefix":"cfdi"
+        }
+        ,
+        "Addenda": {
+            "grupominera": {
+                "_xmlns": "grupominera", "_oficinadepago": "Oficinas México", "_proveedor": "123456", "_tipodocumento": "Factura", "_emailconfirmacion": "juan@hotmail.com", "_categoria": "No Aplica", "_pedido": ""
+            }
+            ,
+            "emision": {
+                "conceptos": {
+                    "concepto": {
+                        "_cantidad": "1", "_unidad": "NO APLICA", "_descripcion": "TICKET VALE DESPENSAS ELECTRO.", "_valorUnitario": "67,293.02", "_importe": "67,293.02", "_tasaIva": "0.00", "_importeIva": "0.00", "__prefix": "edr"
+                    }
+                    ,
+                    "__prefix":"edr"
+                }
+                ,
+                "_xmlns:edr":"http://www.edenred.com.mx/cfdi/3/",
+                "_totalGlobal":"67,683.33",
+                "_subTotalFiscal":"336.47",
+                "_subTotalGlobal":"67,629.49",
+                "_ivaGlobal":"53.84",
+                "_ivaFiscal":"53.84",
+                "_ivaEmision":"0.00",
+                "_totalEmision":"67,293.02",
+                "_totalFiscal":"390.31",
+                "_subTotalEmision":"67,293.02",
+                "__prefix":"edr"
+            }
+            ,
+            "__prefix":"cfdi"
+        }
+        ,
+        "_xmlns:cfdi":"http://www.sat.gob.mx/cfd/3",
+        "_xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance",
+        "_xsi:schemaLocation":"http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd",
+        "_version":"3.2",
+        "_serie":"CL",
+        "_folio":"3911631",
+        "_fecha":"2017-08-15T16:05:41",
+        "_formaDePago":"Pago en una sola exhibicion",
+        "_condicionesDePago":"A LA ENTREGA",
+        "_subTotal":"336.47",
+        "_Moneda":"MXN",
+        "_total":"390.31",
+        "_metodoDePago":"NA",
+        "_tipoDeComprobante":"ingreso",
+        "_LugarExpedicion":"CIUDAD DE MEXICO",
+        "_noCertificado":"00001000000406670260",
+        "_certificado":"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",
+        "_sello":"M9s7ijQBmIe8O38NNFPuFpLw3fyJEnVEC8FZWxu/hPUgiGPt+1U9is3Xkfqz2p7cbD7BgNmdeFp2AxCZ1ZYKNZdmMhtUK7fO/Q2d7Qk1O3WEeNNuLPKC4EXnFxjPJjH8tV/ZDPfY5Ny9ZCo4zAI4M+BCoTXUJEnoC+s0GVzflI9MpauBWgkyEFuF6N/56iH5JjF+abxKh3OD7uSARICzRGmrJwvb8ozwSldYs/Wslf5s6jq3KSqL3+bWhiWzbOLXtYTVzH87Q69zcjsKdkJQNlpmgEODo9M5B0fLCUNO2TeGmzSeBXUFITfRkZ/LvDsTa72pWFQk21/1YZ8WenuXPA==",
+        "__prefix":"cfdi"
+    }
+}
