@@ -47,7 +47,7 @@ sap.ui.define([
 				MessageToast.show("Choose a file first");
 				return;
 			}else{
-				//this.handleFileSelection();
+				this.handleFileSelection();
 				oFileUploaderPDF.upload();
 				oFileUploaderXML.upload();
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);

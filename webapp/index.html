@@ -23,8 +23,8 @@
 				var sRootPath = jQuery.sap.getModulePath("com.gmexico.sup.invproccessInvoice");
 				var oModel = new sap.ui.model.json.JSONModel([sRootPath, "model/PurchaseOrders.json"].join("/"));
 				var oModelBlackList = new sap.ui.model.json.JSONModel([sRootPath, "model/BlackList.json"].join("/"));
-				var oModelInvoice = new sap.ui.model.json.JSONModel([sRootPath, "model/json.json"].join("/"));
-				sap.ui.getCore().setModel(oModelInvoice,"InvoiceModel");
+				//var oModelInvoice = new sap.ui.model.json.JSONModel([sRootPath, "model/json.json"].join("/"));
+				//sap.ui.getCore().setModel(oModelInvoice,"InvoiceModel");
 				sap.ui.getCore().setModel(oModelBlackList,"blackListModel");
 				sap.ui.getCore().setModel(oModel);
 				new sap.m.Shell({
