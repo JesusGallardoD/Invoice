@@ -8,7 +8,7 @@ sap.ui.define([
 
 	return Controller.extend("com.gmexico.sup.invproccessInvoice.controller.UploadFile", {
 		handleUploadPDFComplete: function(oEvent) {
-			var sResponse = oEvent.getParameter("response");
+			/*var sResponse = oEvent.getParameter("response");
 			if (sResponse) {
 				var sMsg = "";
 				var m = /^\[(\d\d\d)\]:(.*)$/.exec(sResponse);
@@ -19,10 +19,10 @@ sap.ui.define([
 					sMsg = "Return Code: " + m[1] + "\n" + m[2] + "(Upload Error)";
 				}
 				MessageToast.show(sMsg);
-			}
+			}*/
 		},
 		handleUploadXMLComplete: function(oEvent) {
-			var sResponse = oEvent.getParameter("response");
+			/*var sResponse = oEvent.getParameter("response");
 			if (sResponse) {
 				var sMsg = "";
 				var m = /^\[(\d\d\d)\]:(.*)$/.exec(sResponse);
@@ -33,13 +33,8 @@ sap.ui.define([
 					sMsg = "Return Code: " + m[1] + "\n" + m[2] + "(Upload Error)";
 				}
 				MessageToast.show(sMsg);
-			}
+			}*/
 		},
-		onPress: function(oEvent){
-			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("main");
-		},
-
 		handleUploadPress: function(oEvent) {
 			var oFileUploaderPDF = this.getView().byId("fileUploaderPDF");
 			var oFileUploaderXML = this.getView().byId("fileUploaderXML");
@@ -48,8 +43,6 @@ sap.ui.define([
 				return;
 			}else{
 				this.handleFileSelection();
-				oFileUploaderPDF.upload();
-				oFileUploaderXML.upload();
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("DocumentReview");
 			}
