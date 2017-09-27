@@ -47,7 +47,7 @@ sap.ui.define([
 				MessageToast.show("Choose a file first");
 				return;
 			}else{
-				this.handleFileSelection();
+				//this.handleFileSelection();
 				oFileUploaderPDF.upload();
 				oFileUploaderXML.upload();
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
@@ -59,7 +59,7 @@ sap.ui.define([
 		    var xmlData = event.target.result;
 		    var parser  = new DOMParser(),
 		    xmlDom = parser.parseFromString(xmlData, "text/xml");
-    		var json = xml2json.xml2json(xmlDom);                            
+    		var json = xml2json.xml2json(xmlDom);
 			var oModel = new sap.ui.model.json.JSONModel((json));
 			sap.ui.getCore().setModel("invoiceXML",oModel);
 		  };
