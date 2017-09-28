@@ -71,7 +71,9 @@ sap.ui.define([
 				category:addenda.categoria ,
 				order:addenda.pedido
 			});
-			 sap.ui.getCore().setModel(oModelInvoice,"InvoiceModel");
+			this.getOwnerComponent().setModel(oModelInvoice,"InvoiceModel");
+			//sap.ui.getCore().setModel(oModelInvoice,"InvoiceModel");
+
 
 		  };
 		},
