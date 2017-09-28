@@ -8,32 +8,10 @@ sap.ui.define([
 
 	return Controller.extend("com.gmexico.sup.invproccessInvoice.controller.UploadFile", {
 		handleUploadPDFComplete: function(oEvent) {
-			/*var sResponse = oEvent.getParameter("response");
-			if (sResponse) {
-				var sMsg = "";
-				var m = /^\[(\d\d\d)\]:(.*)$/.exec(sResponse);
-				if (m[1] === "200") {
-					sMsg = "Return Code: " + m[1] + "\n" + m[2] + "(Upload Success)";
-					oEvent.getSource().setValue("");
-				} else {
-					sMsg = "Return Code: " + m[1] + "\n" + m[2] + "(Upload Error)";
-				}
-				MessageToast.show(sMsg);
-			}*/
+
 		},
 		handleUploadXMLComplete: function(oEvent) {
-			/*var sResponse = oEvent.getParameter("response");
-			if (sResponse) {
-				var sMsg = "";
-				var m = /^\[(\d\d\d)\]:(.*)$/.exec(sResponse);
-				if (m[1] === "200") {
-					sMsg = "Return Code: " + m[1] + "\n" + m[2] + "(Upload Success)";
-					oEvent.getSource().setValue("");
-				} else {
-					sMsg = "Return Code: " + m[1] + "\n" + m[2] + "(Upload Error)";
-				}
-				MessageToast.show(sMsg);
-			}*/
+
 		},
 		handleUploadPress: function(oEvent) {
 			var oFileUploaderPDF = this.getView().byId("fileUploaderPDF");
@@ -42,19 +20,59 @@ sap.ui.define([
 				MessageToast.show("Choose a file first");
 				return;
 			}else{
-				this.handleFileSelection();
+				//this.handleFileSelection();
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("DocumentReview");
 			}
 		},
+		xmlToJson:function (xml) {
+		  function parse(node, j) {
+		    var nodeName = node.nodeName.replace(/^.+:/, '').toLowerCase();
+		    var cur = null;
+		    var text = $(node).contents().filter(function(x) {
+		      return this.nodeType === 3;
+		    });
+		    if (text[0] && text[0].nodeValue.trim()) {
+		      cur = text[0].nodeValue;
+		    } else {
+		      cur = {};
+		      $.each(node.attributes, function() {
+		        if (this.name.indexOf('xmlns:') !== 0) {
+		          cur[this.name.replace(/^.+:/, '')] = this.value;
+		        }
+		      });
+		      $.each(node.children, function() {
+		        parse(this, cur);
+		      });
+		    }
+
+		    j[nodeName] = cur;
+		  }
+
+		  var roots = $(xml);
+		  var root = roots[roots.length-1];
+		  var json = {};
+		  parse(root, json);
+		  return json;
+		},
 		waitForTextReadComplete: function (reader) {
+			var that = this;
 			reader.onloadend = function(event) {
 		    var xmlData = event.target.result;
-		    var parser  = new DOMParser(),
-		    xmlDom = parser.parseFromString(xmlData, "text/xml");
-    		var json = xml2json.xml2json(xmlDom);
-			var oModel = new sap.ui.model.json.JSONModel((json));
-			sap.ui.getCore().setModel("invoiceXML",oModel);
+		    //var parser  = new DOMParser(), xmlDom = parser.parseFromString(xmlData, "text/xml");
+    		var json = that.xmlToJson(xmlData);
+    		var addenda = json.comprobante.addenda.grupominera;
+    		var oModelInvoice = new sap.ui.model.json.JSONModel({
+				xmlns: addenda.xmlnx,
+				office: addenda.oficinadepago,
+				provider: addenda.proveedor,
+				kindDocument: addenda.tipodocumento,
+				email:addenda.emailconfirmacion,
+				category:addenda.categoria ,
+				order:addenda.pedido
+			});
+			 sap.ui.getCore().setModel(oModelInvoice,"InvoiceModel");
+
 		  };
 		},
 		handleFileSelection: function () {
