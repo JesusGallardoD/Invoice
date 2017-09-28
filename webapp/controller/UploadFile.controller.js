@@ -58,7 +58,7 @@ sap.ui.define([
     		var json = that.xmlToJson(xmlData);
     		var addenda = json.comprobante.addenda.grupominera;
     		var oModelInvoice = new sap.ui.model.json.JSONModel({
-				xmlns: addenda.xmlnx,
+				xmlns: addenda.xmlns,
 				office: addenda.oficinadepago,
 				provider: addenda.proveedor,
 				kindDocument: addenda.tipodocumento,

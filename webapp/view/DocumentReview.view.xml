@@ -10,26 +10,26 @@
 				<Panel id="productDetailsPanel" headerText="Addenda" class="sapUiResponsiveMargin" width="auto">
 					<l:Grid defaultSpan="L3 M6 S12" containerQuery="true">
 						<Label text="xmlns:"/>
-						<Input id="xmlns" placeholder="xmlns" value=""/>
-			
+						<Input id="xmlns" placeholder="" value=""/>
+
 						<Label text="Oficina de pago:"/>
-						<Input id="office" placeholder="Oficina de pago" value=""/>
-			
+						<Input id="office" placeholder="" value=""/>
+
 						<Label text="Proveedor:"/>
-						<Input id="provider" placeholder="Proveedor" value=""/>
-			
+						<Input id="provider" placeholder="" value=""/>
+
 						<Label text="Documento:"/>
-						<Input id="kindDocument" placeholder="Tipo de Document" value=""/>
-			
+						<Input id="kindDocument" placeholder="" value=""/>
+
 						<Label text="Email:"/>
-						<Input id="email" placeholder="email" value=""/>
-						
+						<Input id="email" placeholder="" value=""/>
+
 						<Label text="Categoria:"/>
-						<Input id="category" placeholder="Categoria" value=""/>
-						
+						<Input id="category" placeholder="" value=""/>
+
 						<Label text="Orden:"/>
-						<Input id="order" placeholder="Orden" value=""/>
-					
+						<Input id="order" placeholder="" value=""/>
+
 					</l:Grid>
 				</Panel>
 				<Button text="Facturar" press="onPress" width="300px" />
