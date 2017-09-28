@@ -20,7 +20,7 @@ sap.ui.define([
 				MessageToast.show("Choose a file first");
 				return;
 			}else{
-				//this.handleFileSelection();
+				this.handleFileSelection();
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("DocumentReview");
 			}
