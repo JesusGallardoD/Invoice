@@ -8,10 +8,8 @@ sap.ui.define([
 
 	return Controller.extend("com.gmexico.sup.invproccessInvoice.controller.UploadFile", {
 		handleUploadPDFComplete: function(oEvent) {
-
 		},
 		handleUploadXMLComplete: function(oEvent) {
-
 		},
 		handleUploadPress: function(oEvent) {
 			var oFileUploaderPDF = this.getView().byId("fileUploaderPDF");
@@ -21,8 +19,6 @@ sap.ui.define([
 				return;
 			}else{
 				this.handleFileSelection();
-				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-				oRouter.navTo("DocumentReview");
 			}
 		},
 		xmlToJson:function (xml) {
@@ -48,7 +44,6 @@ sap.ui.define([
 
 		    j[nodeName] = cur;
 		  }
-
 		  var roots = $(xml);
 		  var root = roots[roots.length-1];
 		  var json = {};
@@ -71,9 +66,10 @@ sap.ui.define([
 				category:addenda.categoria ,
 				order:addenda.pedido
 			});
-			this.getOwnerComponent().setModel(oModelInvoice,"InvoiceModel");
-			//sap.ui.getCore().setModel(oModelInvoice,"InvoiceModel");
+			 sap.ui.getCore().setModel(oModelInvoice,"InvoiceModel");
 
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(that);
+			oRouter.navTo("DocumentReview");
 
 		  };
 		},
